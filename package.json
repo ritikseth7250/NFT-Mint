@@ -1,0 +1,28 @@
+{
+  "name": "nft-mint",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "contract:test": "cargo test --manifest-path contracts/nft-minter/Cargo.toml",
+    "contract:build": "cargo build --target wasm32v1-none --release --manifest-path contracts/nft-minter/Cargo.toml",
+    "deploy:contract": "node scripts/deploy-contract.mjs"
+  },
+  "dependencies": {
+    "@creit-tech/stellar-wallets-kit": "npm:@jsr/creit-tech__stellar-wallets-kit@^2.1.0",
+    "@stellar/stellar-sdk": "^15.0.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "yarn": "^1.22.22"
+  }
+}
